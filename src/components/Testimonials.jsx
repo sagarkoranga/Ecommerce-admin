@@ -12,7 +12,7 @@ export default function Testimonials() {
   const [editId, setEditId] = useState(null);
 
   const load = async () => {
-    const res = await axios.get("https://ecommerce-backend.onrender.com/testimonials");
+    const res = await axios.get(" https://ecommerce-backend-alnr.onrender.com/testimonials");
     setTestimonials(res.data);
   };
 
@@ -21,7 +21,7 @@ export default function Testimonials() {
   }, []);
 
   const toggleStatus = async (id, status) => {
-    await axios.patch(`https://ecommerce-backend.onrender.com/testimonials/${id}/status`, { status });
+    await axios.patch(` https://ecommerce-backend-alnr.onrender.com/testimonials/${id}/status`, { status });
     load();
   };
 
@@ -33,9 +33,9 @@ export default function Testimonials() {
     if (form.image) fd.append("image", form.image);
 
     if (editId) {
-      await axios.patch(`https://ecommerce-backend.onrender.com/testimonials/${editId}`, fd);
+      await axios.patch(`https://ecommerce-backend-alnr.onrender.com/testimonials/${editId}`, fd);
     } else {
-      await axios.post("https://ecommerce-backend.onrender.com/testimonials", fd);
+      await axios.post("https://ecommerce-backend-alnr.onrender.com/testimonials", fd);
     }
 
     setForm({ name: "", message: "", image: null, status: true });
@@ -105,7 +105,7 @@ export default function Testimonials() {
           >
             <img
             
-              src={`https://ecommerce-backend.onrender.com${t.image}`}
+              src={`https://ecommerce-backend-alnr.onrender.com${t.image}`}
               alt={t.name}
               className="h-120 w-full object-cover rounded mb-3"
             />
