@@ -229,7 +229,7 @@ export default function CategoryList({ categories }) {
               >
                 {Array.isArray(p.images) && p.images.length > 0 && (
                   <img
-                    src={`http://localhost:3000${p.images[0]}`}
+                    src={`https://ecommerce-backend.onrender.com${p.images[0]}`}
                     alt={p.title}
                     className="w-full h-52 object-cover rounded-md mb-2"
                   />
@@ -255,7 +255,7 @@ export default function CategoryList({ categories }) {
               {selectedProduct.images?.map((img, i) => (
                 <img
                   key={i}
-                  src={`http://localhost:3000${img}`}
+                  src={`https://ecommerce-backend.onrender.com${img}`}
                   alt="product"
                   className="w-full h-40 object-cover rounded-md"
                 />

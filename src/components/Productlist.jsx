@@ -60,7 +60,7 @@ export default function ProductList() {
                                             {p.images?.map((img, i) => (
                                                 <img
                                                     key={i}
-                                                    src={`http://localhost:3000${img}`}
+                                                    src={`https://ecommerce-backend.onrender.com${img}`}
                                                     alt="product"
                                                     className="w-12 h-12 object-cover rounded border transition-transform duration-300 hover:scale-110"
                                                 />

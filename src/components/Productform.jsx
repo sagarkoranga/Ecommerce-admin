@@ -317,7 +317,7 @@ export default function ProductForm({ product, onSaved }) {
                   src={
                     img.startsWith("blob")
                       ? img
-                      : `http://localhost:3000${img}`
+                      : `https://ecommerce-backend.onrender.com${img}`
                   }
                   alt="preview"
                   className="w-20 h-20 object-cover border rounded"

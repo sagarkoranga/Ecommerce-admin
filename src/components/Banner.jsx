@@ -94,7 +94,7 @@ export default function Banners() {
         {banners.map((b) => (
           <div key={b.id} className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
             <img
-              src={`http://localhost:3000${b.image}`}
+              src={`https://ecommerce-backend.onrender.com${b.image}`}
               alt={b.title}
               className="rounded mb-3 h-48 w-full object-cover transition-transform hover:scale-105"
             />
@@ -121,7 +121,7 @@ export default function Banners() {
                 Edit
               </button>
               <button
-                onClick={() => axios.delete(`http://localhost:3000/banners/${b.id}`).then(load)}
+                onClick={() => axios.delete(`https://ecommerce-backend.onrender.com/banners/${b.id}`).then(load)}
                 className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition"
               >
                 Delete
