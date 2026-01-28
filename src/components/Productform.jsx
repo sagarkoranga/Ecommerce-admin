@@ -48,7 +48,7 @@ export default function ProductForm({ product, onSaved }) {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     let uploadedImagePaths = [...existingImages];
 
