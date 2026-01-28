@@ -26,7 +26,7 @@ export const updateProductStatus = (id, status) =>
   api.put(`/products/status/${id}`, { status });
 
 export const uploadImages = (formData) => {
-  return axios.post(`${API_URL}/products/upload`, formData, {
+  return api.post(`/products/upload`, formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 };
