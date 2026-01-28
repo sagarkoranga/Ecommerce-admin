@@ -11,7 +11,7 @@ export default function Banners() {
   const [editId, setEditId] = useState(null);
 
   const load = async () => {
-    const res = await axios.get("http://localhost:3000/banners");
+    const res = await api.get("/banners");
     setBanners(res.data);
   };
 
@@ -20,7 +20,7 @@ export default function Banners() {
   }, []);
 
   const toggleStatus = async (id, status) => {
-    await axios.patch(`http://localhost:3000/banners/${id}/status`, { status });
+    await api.patch(`/banners/${id}/status`, { status });
     load();
   };
 
@@ -31,9 +31,9 @@ export default function Banners() {
     if (form.image) fd.append("image", form.image);
 
     if (editId) {
-      await axios.patch(`http://localhost:3000/banners/${editId}`, fd);
+      await api.patch(`/banners/${editId}`, fd);
     } else {
-      await axios.post("http://localhost:3000/banners", fd);
+      await api.post("/banners", fd);
     }
 
     setForm({ title: "", image: null, status: true });
